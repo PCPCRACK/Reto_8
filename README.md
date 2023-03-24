@@ -39,75 +39,19 @@ if __name__ == "__main__" :
             print(n) #imprime el valor de n en cada ciclo si se cumple la condicion
         n -= 1 #resta 1 al valor de n
 ```
-4. En 2022 el país A tendrá una población de 25 millones de habitantes y el país B de 18:9 millones. Las tasas de crecimiento anual de la población serán de 2% y 3% respectivamente. Desarrollar un algoritmo para informar en que año la población del país B superará a
-la de A.
-```python
-if __name__ == "__main__" :
-    PA = 25000000 #inicializa PA en 25000000
-    PB = 18900000 #inicializa PB en 18900000
-    año = 2022 #inicializa año en 2022
-    while PA>=PB : #mientras PA sea mayor o igual que PB
-        print("Poblacion del pais A ",PA," mientas que el pais B tiene ",PB," en el año ",año)
-        PA *= 1.02  #se le aumenta el 2 % cada ciclo
-        PB *= 1.03 #se le aumenta el 3 % cada cilco
-        año += 1 #suma 1 al valor de año
-    print("Poblacion del pais A ",PA," mientas que el pais B tiene ",PB," en el año ",año) 
-    """ se ejecuta al terminar el ciclo 
-    con los valores finales de PA,PB y año"""
-```
-5. Imprimir el factorial de un número natural n dado.
-```python
-if __name__ == "__main__" :
-    n = int(input("Numero factorial ")) #se ingresa el valor de n
-    f = n #inicializa f en n
-    while n > 1 : #mientras n sea mayor a 1
-        n -= 1 #se le resta 1 a n para que no se multiplique por si mismo la primera vez
-        f *= n #se multiplica el valor inicial f por el mismo valor menos 1 osea n
-    print("El valor factorial es ",f) #se ejecuta al terminar el ciclo 
-```
-6. Implementar un algoritmo que permita adivinar un número dado de 1 a 100, preguntando en cada caso si el número es mayor, menor o igual.
-```python
-from random import randint
+4. Imprimir los números de 1 hasta un número natural n dado, cada uno con su respectivo factorial
 
-if __name__ == "__main__" :
-    f = randint(1,100) #se elije un valor aleatorio para f
-    n = int(input("Adivina el numero del 1 al 100 ")) #se ingresa el valor de n
-    while n != f : #se compara en caso de que n sea igual f
-        if n < f : #si n es menor que f
-            print("el numero es mayor ")
-        else: #sino
-            print("el numero es menor ")
-            n = int(input("intenta otra vez ")) #se sobreescribe el valor de n y se compara
-print("acertaste el numero era ",f) #se ejecuta al terminar el ciclo con el valor final de f
-```
-7. Implementar un programa que ingrese un número de 2 a 50 y muestre sus divisores.
+5. Calcular el valor de 2 elevado a la potencia n usando ciclos for.
 
-```python
-if __name__ == "__main__" :
-    n = int(input("ingrese un número de 2 a 50 ")) #se ingresa el valor de n
-    i = 1 #se establece un contador
-    while i <= n : #mientras i sea menor o igual n
-        if n%i == 0 : #si n es divisible por i por residuo igual a 0
-            print(i) #se imprime i
-        i +=1 #se le suma 1 en cada ciclo
-```
-8. Implementar el algoritmo que muestre los números primos del 1 al 100. **nota:** use funciones
-```python
-def Esne(n : int,):
-        i = int(2) # se establece un contador en 2
-        if n == 2 : #si es dos 
-            print(n)
-        while i < n : #mientras i sea menor a n
-            if n%i == 0: #si n es divisible por i y de residuo igual 0
-                break #se rompe el ciclo
-            elif i == n-1: #si i es igual n-1
-                print(n) 
-            i += 1 #se le suma 1 en cada ciclo
+6. Leer un número natural n, leer otro dato de tipo real x y calcular x^n usando ciclos for.
 
-if __name__ == "__main__" :
-    n = int(2) #inicializa n en 3
-    T = 100 #inicializa T en 100
-    while n < T: #mientras n sea menor que T
-        a = Esne(n) #se llama la funcion
-        n += 1 #se le suma 1 en cada ciclo
-```
+7. Diseñe un programa que muestre las tablas de multiplicar del 1 al 9.
+
+8. Diseñar una función que permita calcular una aproximación de la función exponencial alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función exponencial y mostrar la diferencia entre el valor real y la aproximación.
+$$e^x \approx exp(x,n) \approx \sum_{i=0}^{n}\frac{x^i}{i!}$$
+
+9. Diseñar una función que permita calcular una aproximación de la función seno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función seno y mostrar la diferencia entre el valor real y la aproximación.
+$$sin(x) \approx sin(x,n) \approx \sum_{i=0}^{n} (-1)^i \frac{x^{2i+1}}{(2i+1)!}$$
+
+10. Diseñar una función que permita calcular una aproximación de la función arcotangente alrededor de 0 para cualquier valor x en el rango [-1, 1], utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función arctan y mostrar la diferencia entre el valor real y la aproximación.
+$$arctan(x) \approx arctan(x,n) \approx \sum_{i=0}^{n} (-1)^i \frac{x^{2i+1}}{(2i+1)}$$
