@@ -109,7 +109,51 @@ if __name__ == "__main__":
 ```
 8. Diseñar una función que permita calcular una aproximación de la función exponencial alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función exponencial y mostrar la diferencia entre el valor real y la aproximación.
 $$e^x \approx exp(x,n) \approx \sum_{i=0}^{n}\frac{x^i}{i!}$$
+```python
+import math
 
+def exp_aprox(x, n):
+    """
+    Calcula una aproximación de la función exponencial alrededor de 0 para cualquier valor x (real),
+    utilizando los primeros n términos de la serie de Maclaurin.
+
+    Parámetros:
+    x -- El valor para el cual se desea aproximar la función exponencial.
+    n -- El número de términos de la serie de Maclaurin que se utilizarán para la aproximación.
+
+    Retorna:
+    El valor de la aproximación de la función exponencial alrededor de 0 para el valor de x dado.
+    """
+
+    # Inicializar el resultado en 0
+    resultado = 0
+
+    # Utilizar un bucle for para sumar los primeros n términos de la serie de Maclaurin
+    for i in range(n):
+        # Calcular el término actual de la serie de Maclaurin
+        termino = x**i / math.factorial(i)
+        # Agregar el término actual al resultado
+        resultado += termino
+
+    # Devolver el resultado de la aproximación
+    return resultado
+
+if __name__ == "__main__":
+    # Pedir al usuario que ingrese los valores de x y n
+    x = float(input("Ingrese el valor de x: "))
+    n = int(input("Ingrese el número de términos de la serie de Maclaurin que se utilizarán para la aproximación: "))
+
+    # Calcular el valor real de la función exponencial para x
+    valor_real = math.exp(x)
+
+    # Calcular la aproximación utilizando la función exp_aprox
+    aproximacion = exp_aprox(x, n)
+
+    # Imprimir el valor real, la aproximación y la diferencia entre ellos
+    print(f"Valor real: {valor_real}")
+    print(f"Aproximación: {aproximacion}")
+    print(f"Diferencia: {abs(valor_real - aproximacion)}")
+```
 9. Diseñar una función que permita calcular una aproximación de la función seno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función seno y mostrar la diferencia entre el valor real y la aproximación.
 $$sin(x) \approx sin(x,n) \approx \sum_{i=0}^{n} (-1)^i \frac{x^{2i+1}}{(2i+1)!}$$
 
