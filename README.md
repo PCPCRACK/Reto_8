@@ -156,6 +156,99 @@ if __name__ == "__main__":
 ```
 9. Diseñar una función que permita calcular una aproximación de la función seno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función seno y mostrar la diferencia entre el valor real y la aproximación.
 $$sin(x) \approx sin(x,n) \approx \sum_{i=0}^{n} (-1)^i \frac{x^{2i+1}}{(2i+1)!}$$
+```python
+import math
 
+def sin_aprox(x, n):
+    """
+    Calcula una aproximación de la función seno alrededor de 0 para cualquier valor x (real),
+    utilizando los primeros n términos de la serie de Maclaurin.
+
+    Parámetros:
+    x -- El valor para el cual se desea aproximar la función seno.
+    n -- El número de términos de la serie de Maclaurin que se utilizarán para la aproximación.
+
+    Retorna:
+    El valor de la aproximación de la función seno alrededor de 0 para el valor de x dado.
+    """
+
+    # Inicializar el resultado en 0
+    resultado = 0
+
+    # Utilizar un bucle for para sumar los primeros n términos de la serie de Maclaurin
+    for i in range(n):
+        # Calcular el término actual de la serie de Maclaurin
+        termino = (-1)**i * x**(2*i + 1) / math.factorial(2*i + 1)
+        # Agregar el término actual al resultado
+        resultado += termino
+
+    # Devolver el resultado de la aproximación
+    return resultado
+
+if __name__ == "__main__":
+    # Pedir al usuario que ingrese los valores de x y n
+    x = float(input("Ingrese el valor de x: "))
+    n = int(input("Ingrese el número de términos de la serie de Maclaurin que se utilizarán para la aproximación: "))
+
+    # Calcular el valor real de la función seno para x
+    valor_real = math.sin(x)
+
+    # Calcular la aproximación utilizando la función sin_aprox
+    aproximacion = sin_aprox(x, n)
+
+    # Imprimir el valor real, la aproximación y la diferencia entre ellos
+    print(f"Valor real: {valor_real}")
+    print(f"Aproximación: {aproximacion}")
+    print(f"Diferencia: {abs(valor_real - aproximacion)}")
+```
 10. Diseñar una función que permita calcular una aproximación de la función arcotangente alrededor de 0 para cualquier valor x en el rango [-1, 1], utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función arctan y mostrar la diferencia entre el valor real y la aproximación.
 $$arctan(x) \approx arctan(x,n) \approx \sum_{i=0}^{n} (-1)^i \frac{x^{2i+1}}{(2i+1)}$$
+```python
+import math
+
+def arcotangente_aprox(x, n):
+    """
+    Calcula una aproximación de la función arcotangente alrededor de 0 para cualquier valor x en el rango [-1, 1],
+    utilizando los primeros n términos de la serie de Maclaurin.
+
+    Parámetros:
+    x -- El valor para el cual se desea aproximar la función arcotangente. Debe estar en el rango [-1, 1].
+    n -- El número de términos de la serie de Maclaurin que se utilizarán para la aproximación.
+
+    Retorna:
+    El valor de la aproximación de la función arcotangente alrededor de 0 para el valor de x dado.
+    """
+
+    # Verificar que el valor de x esté en el rango [-1, 1]
+    if x < -1 or x > 1:
+        raise ValueError("El valor de x debe estar en el rango [-1, 1].")
+
+    # Inicializar el resultado en 0
+    resultado = 0
+
+    # Utilizar un bucle for para sumar los primeros n términos de la serie de Maclaurin
+    for i in range(n):
+        # Calcular el término actual de la serie de Maclaurin
+        termino = (-1)**i * x**(2*i + 1) / (2*i + 1)
+        # Agregar el término actual al resultado
+        resultado += termino
+
+    # Devolver el resultado de la aproximación
+    return resultado
+
+if __name__ == "__main__":
+    # Pedir al usuario que ingrese el valor de x y el número de términos de la serie de Maclaurin
+    x = float(input("Ingrese el valor de x (debe estar en el rango [-1, 1]): "))
+    n = int(input("Ingrese el número de términos de la serie de Maclaurin que se utilizarán para la aproximación: "))
+
+    # Calcular el valor real de la función arcotangente para x
+    valor_real = math.atan(x)
+
+    # Calcular la aproximación utilizando la función arcotangente_aprox
+    aproximacion = arcotangente_aprox(x, n)
+
+    # Imprimir el valor real, la aproximación y la diferencia entre ellos
+    print(f"Valor real: {valor_real}")
+    print(f"Aproximación: {aproximacion}")
+    print(f"Diferencia: {abs(valor_real - aproximacion)}")
+```
