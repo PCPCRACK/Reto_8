@@ -58,6 +58,21 @@ if __name__ == "__main__":
         # Utilizar la función factorial definida anteriormente para calcular el factorial de cada número
         print(f"{i}! = {factorial(i)}")
 ```
+Version alterna a ese codigo
+```python
+n = int(input("Ingrese numero final: "))
+a = 1
+i = 1
+t = 1
+while a <= n:
+    while i <= a:
+        t *= i
+        i += 1
+    print ("el factoria de ",a," es ",t)
+    t = 1
+    i = 1
+    a += 1
+```
 5. Calcular el valor de 2 elevado a la potencia n usando ciclos for.
 ```python
 if __name__ == "__main__":
