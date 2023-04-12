@@ -114,7 +114,7 @@ if __name__ == "__main__":
     print(x,"^",n,"=",resultado)
 ```
 7. Diseñe un programa que muestre las tablas de multiplicar del 1 al 9.
-```
+```python
 if __name__ == "__main__":
     # Iterar por cada número del 1 al 9
     for i in range(1, 10):
