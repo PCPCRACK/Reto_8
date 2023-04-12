@@ -132,6 +132,18 @@ if __name__ == "__main__":
             print(i,"x",j,"=",i*j)
             
 ```
+ES ESTE 
+```python
+if __name__ == "__main__":
+# Iterar por cada número del 1 al 9
+    for i in range(1, 10):
+    # Imprimir el encabezado de la tabla
+        print(f"Tabla del {i}:")
+        # Iterar por cada número del 1 al 10
+        for j in range(1, 11):
+        # Calcular el producto de i y j y mostrarlo en la consola
+            print(f"{i} x {j} = {i*j}")
+```
 8. Diseñar una función que permita calcular una aproximación de la función exponencial alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función exponencial y mostrar la diferencia entre el valor real y la aproximación.
 $$e^x \approx exp(x,n) \approx \sum_{i=0}^{n}\frac{x^i}{i!}$$
 ```python
