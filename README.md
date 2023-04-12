@@ -152,8 +152,10 @@ def exp_aprox(x, n):
 
     # Utilizar un bucle for para sumar los primeros n términos de la serie de Maclaurin
     for i in range(n):
+    
         # Calcular el término actual de la serie de Maclaurin
         termino = x**i / math.factorial(i)
+        
         # Agregar el término actual al resultado
         resultado += termino
 
@@ -199,8 +201,10 @@ def sin_aprox(x, n):
 
     # Utilizar un bucle for para sumar los primeros n términos de la serie de Maclaurin
     for i in range(n):
+    
         # Calcular el término actual de la serie de Maclaurin
         termino = (-1)**i * x**(2*i + 1) / math.factorial(2*i + 1)
+        
         # Agregar el término actual al resultado
         resultado += termino
 
@@ -250,8 +254,10 @@ def arcotangente_aprox(x, n):
 
     # Utilizar un bucle for para sumar los primeros n términos de la serie de Maclaurin
     for i in range(n):
+    
         # Calcular el término actual de la serie de Maclaurin
         termino = (-1)**i * x**(2*i + 1) / (2*i + 1)
+        
         # Agregar el término actual al resultado
         resultado += termino
 
