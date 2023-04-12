@@ -2,9 +2,11 @@
 1. Imprimir un listado con los números del 1 al 100 cada uno con su respectivo cuadrado.
 ```python
 if __name__ == "__main__":
- # Utilizar un bucle for para imprimir los números del 1 al 100
+    # Utilizar un bucle for para imprimir los números del 1 al 100
     for i in range (1,101): 
-        print("El numero es",i,"y su cuadrado es",i**2) #muestra el resultado y eleva al cuadrado el resultado
+    
+        # Muestra el resultado y eleva al cuadrado el resultado
+        print("El numero es",i,"y su cuadrado es",i**2) 
 ```
 2.  Imprimir un listado con los números impares desde 1 hasta 999 y seguidamente otro listado con los números pares desde 2 hasta 1000.
 ```python
@@ -12,16 +14,21 @@ if __name__ == "__main__":
     # Utilizar un bucle for para imprimir los números del 1 al 999 
     for i in range (1,1000,2): #se establece un rango 
         print(i) 
-     # Utilizar un bucle for para imprimir los números del 2 al 1000
+        
+    # Utilizar un bucle for para imprimir los números del 2 al 1000
     for i in range (0,1001,2): 
         print(i) 
 ```
 3.  Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado
 ```python
 if __name__ == "__main__":
-    n = int(input("valor inicial ")) #definimos n
-    if n%2 != 0: #si n no es par le resta 1
+    # Definimos n
+    n = int(input("valor inicial ")) 
+    
+    # Si n no es par le resta 1
+    if n%2 != 0: 
         n -= 1 
+        
     # Utilizar un bucle for para imprimir los números del n al 1
     for i in range (n,1,-2):
         print(i) 
@@ -29,10 +36,15 @@ if __name__ == "__main__":
 4. Imprimir los números de 1 hasta un número natural n dado, cada uno con su respectivo factorial
 ```python
 if __name__ == "__main__":
-    n = int(input("valor final ")) #definimos n
+    # Definimos n
+    n = int(input("valor final "))
+    
     # Utilizar un bucle for para imprimir los números del 1 al n
     for i in range (1,n+1): 
-        sum = i # sum es igual al valor de i
+    
+        # sum es igual al valor de i
+        sum = i 
+        
         # Utilizar un bucle for para multiplicar los números del i-1 al 1
         for a in range (i-1,1,-1):
             sum *= a
@@ -40,30 +52,47 @@ if __name__ == "__main__":
 ```
 Version alterna a ese codigo
 ```python
-n = int(input("Ingrese numero final: ")) #definimos n,a,i y t
-a = 1
-i = 1
-t = 1
-while a <= n: #mientras a sea menor que n
-    while i <= a: # minetras i sea menor que a
-        t *= i
-        i += 1
-    print ("el factoria de ",a," es ",t) #muestra los resultados
-    t = 1 #se restablecen los valores de t y i
+if __name__ == "__main__":
+    # Definimos n,a,i y t
+    n = int(input("Ingrese numero final: ")) 
+    a = 1
     i = 1
-    a += 1 # se suma 1 a a
+    t = 1
+
+    # Mientras a sea menor que n
+    while a <= n: 
+
+        # Minetras i sea menor que a
+        while i <= a: 
+            t *= i
+            i += 1
+
+        # Muestra los resultados
+        print ("el factoria de ",a," es ",t) 
+
+        # Se restablecen los valores de t y i
+        t = 1 
+        i = 1
+
+        # Se suma 1 a a
+        a += 1 
 ```
 5. Calcular el valor de 2 elevado a la potencia n usando ciclos for.
 ```python
 if __name__ == "__main__":
-    n = int(input("valor ")) #definimos n y sum
+    # Definimos n y sum
+    n = int(input("valor ")) 
     sum = 2
+    
     # Utilizar un bucle for para multiplicar por 2, n cantidad de veces
     for i in range (1,n+1):
+        
         #i dentro del bucle coje un valor de 2, que no afecta el valor de i en for
         i = 2
         sum *= i
-    print (sum) #muestra el resultado
+    
+    # Muestra el resultado
+    print (sum) 
 ```
 6. Leer un número natural n, leer otro dato de tipo real x y calcular x^n usando ciclos for.
 ```python
