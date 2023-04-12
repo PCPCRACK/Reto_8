@@ -110,22 +110,24 @@ if __name__ == "__main__":
     for i in range(n):
         resultado *= x
 
-    # Imprimir el resultado utilizando una cadena formateada
-    print(f"{x}^{n} = {resultado}")
+    # Imprimir el resultado
+    print(x,"^",n,"=",resultado)
 ```
 7. Diseñe un programa que muestre las tablas de multiplicar del 1 al 9.
 ```
 if __name__ == "__main__":
-# Iterar por cada número del 1 al 9
+    # Iterar por cada número del 1 al 9
     for i in range(1, 10):
-    # Imprimir el encabezado de la tabla
-        print(f"Tabla del {i}:")
+        
+        # Imprimir el encabezado de la tabla
+        print("Tabla del", i)
+        
         # Iterar por cada número del 1 al 10
         for j in range(1, 11):
-        # Calcular el producto de i y j y mostrarlo en la consola
-            print(f"{i} x {j} = {i*j}")
-    # Imprimir una línea en blanco para separar las tablas
-    print()
+            
+            # Calcular el producto de i y j y mostrarlo en la consola
+            print(i,"x",j,"=",i*j)
+            
 ```
 8. Diseñar una función que permita calcular una aproximación de la función exponencial alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función exponencial y mostrar la diferencia entre el valor real y la aproximación.
 $$e^x \approx exp(x,n) \approx \sum_{i=0}^{n}\frac{x^i}{i!}$$
