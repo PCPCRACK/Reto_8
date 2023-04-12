@@ -2,61 +2,41 @@
 1. Imprimir un listado con los números del 1 al 100 cada uno con su respectivo cuadrado.
 ```python
 if __name__ == "__main__":
-    n = int(1) #inicializa a n en 1
-    while n <= 100:
-        
-        """Mientras el valor de n sea menor o igual a 100, se
-        va a repertir el print y se le sumara 1 a n cada vez
-        que se repita el ciclo"""
-        
-        print("El cuadrado del número ",n," es", n**2) #se eleva el numero dentro del print
-        n +=1 #se le suma 1 a n cada ciclo
+ # Utilizar un bucle for para imprimir los números del 1 al 100
+    for i in range (1,101): 
+        print("El numero es",i,"y su cuadrado es",i**2) #muestra el resultado y eleva al cuadrado el resultado
 ```
 2.  Imprimir un listado con los números impares desde 1 hasta 999 y seguidamente otro listado con los números pares desde 2 hasta 1000.
 ```python
 if __name__ == "__main__":
-    n = 1 #inicializa n en 1
-    print ("un listado con los números impares desde 1 hasta 999") #se ejecuta antes de iniciar el ciclo
-    while n < 1000: #mientras n sea menor que 1000
-        if n%2 > 0: #compara si el valor del la divion por residuo de n es mayor a cero
-            print (n) #imprime el valor de n en cada ciclo
-        n += 1 #suma 1 al valor de n
-        
-    n = 2 #cambia el valor de n a 2
-    print("listado con los números pares desde 2 hasta 1000.") #se ejecuta antes de iniciar el ciclo
-    while n <= 1000: #mientras n sea menor o igual que 1000
-        if n%2 == 0: #compara si el valor del la divion por residuo de n es igual a cero
-            print (n) #imprime el valor de n en cada ciclo
-        n += 1 #resta 1 al valor de n
+    # Utilizar un bucle for para imprimir los números del 1 al 999 
+    for i in range (1,1000,2): #se establece un rango 
+        print(i) 
+     # Utilizar un bucle for para imprimir los números del 2 al 1000
+    for i in range (0,1001,2): 
+        print(i) 
 ```
 3.  Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado
 ```python
-if __name__ == "__main__" :
-    n = int(1000) #inicializa n en 1000
-    print("números pares en forma descendente hasta 2") #se ejecuta antes de iniciar el ciclo
-    while n>=2: #mientras n sea mayor que 1
-        if n%2 == 0: #compara si el valor del la divion por residuo de n es igual a cero
-            print(n) #imprime el valor de n en cada ciclo si se cumple la condicion
-        n -= 1 #resta 1 al valor de n
+if __name__ == "__main__":
+    n = int(input("valor inicial "))
+    if n%2 != 0: #si n no es par le resta 1
+        n -= 1 
+    # Utilizar un bucle for para imprimir los números del n al 1
+    for i in range (n,1,-2):
+        print(i) 
 ```
 4. Imprimir los números de 1 hasta un número natural n dado, cada uno con su respectivo factorial
 ```python
-def factorial(n): #definimos un funcion
-    # Verificar si el número es 0 o 1 (en cuyo caso su factorial es 1)
-    if n == 0 or n == 1:
-        return 1
-    else:
-        # Calcular el factorial multiplicando el número por el factorial de su predecesor
-        return n * factorial(n-1)
-
 if __name__ == "__main__":
-    # Solicitar al usuario que ingrese un número natural
-    n = int(input("Ingrese un número natural: "))
-
-    # Utilizar un bucle for para imprimir los números del 1 al n junto con su factorial correspondiente
-    for i in range(1, n+1):
-        # Utilizar la función factorial definida anteriormente para calcular el factorial de cada número
-        print(f"{i}! = {factorial(i)}")
+    n = int(input("valor final ")) #definimos n
+    # Utilizar un bucle for para imprimir los números del 1 al n
+    for i in range (1,n+1): 
+        sum = i # sum es igual al valor de i
+        # Utilizar un bucle for para multiplicar los números del i-1 al 1
+        for a in range (i-1,1,-1):
+            sum *= a
+        print("El numero es ",i," y su factorial es ",sum)
 ```
 Version alterna a ese codigo
 ```python
