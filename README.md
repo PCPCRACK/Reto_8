@@ -39,16 +39,19 @@ if __name__ == "__main__":
     # Definimos n
     n = int(input("valor final "))
     
-    # Utilizar un bucle for para imprimir los números del 1 al n
-    for i in range (1,n+1): 
-    
-        # sum es igual al valor de i
-        sum = i 
-        
-        # Utilizar un bucle for para multiplicar los números del i-1 al 1
-        for a in range (i-1,1,-1):
-            sum *= a
-        print("El numero es ",i," y su factorial es ",sum)
+    if n == 0 or n == 1:
+        print("1")
+    else:
+        # Utilizar un bucle for para imprimir los números del 1 al n
+        for i in range (1,n+1): 
+
+            # sum es igual al valor de i
+            sum = i 
+
+            # Utilizar un bucle for para multiplicar los números del i-1 al 1
+            for a in range (i-1,1,-1):
+                sum *= a
+            print("El numero es ",i," y su factorial es ",sum)
 ```
 Version alterna a ese codigo
 ```python
