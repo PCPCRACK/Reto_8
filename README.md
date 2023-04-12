@@ -19,7 +19,7 @@ if __name__ == "__main__":
 3.  Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado
 ```python
 if __name__ == "__main__":
-    n = int(input("valor inicial "))
+    n = int(input("valor inicial ")) #definimos n
     if n%2 != 0: #si n no es par le resta 1
         n -= 1 
     # Utilizar un bucle for para imprimir los números del n al 1
@@ -40,34 +40,30 @@ if __name__ == "__main__":
 ```
 Version alterna a ese codigo
 ```python
-n = int(input("Ingrese numero final: "))
+n = int(input("Ingrese numero final: ")) #definimos n,a,i y t
 a = 1
 i = 1
 t = 1
-while a <= n:
-    while i <= a:
+while a <= n: #mientras a sea menor que n
+    while i <= a: # minetras i sea menor que a
         t *= i
         i += 1
-    print ("el factoria de ",a," es ",t)
-    t = 1
+    print ("el factoria de ",a," es ",t) #muestra los resultados
+    t = 1 #se restablecen los valores de t y i
     i = 1
-    a += 1
+    a += 1 # se suma 1 a a
 ```
 5. Calcular el valor de 2 elevado a la potencia n usando ciclos for.
 ```python
 if __name__ == "__main__":
-    # Solicitar al usuario que ingrese un número entero
-    n = int(input("Ingrese un número entero: "))
-
-    # Inicializar la variable resultado en 1
-    resultado = 1
-
-    # Utilizar un bucle for para multiplicar 2 por sí mismo n veces
-    for i in range(n):
-        resultado *= 2
-
-    # Imprimir el resultado utilizando una cadena formateada
-    print(f"2^{n} = {resultado}")
+    n = int(input("valor ")) #definimos n y sum
+    sum = 2
+    # Utilizar un bucle for para multiplicar por 2, n cantidad de veces
+    for i in range (1,n+1):
+        #i dentro del bucle coje un valor de 2, que no afecta el valor de i en for
+        i = 2
+        sum *= i
+    print (sum) #muestra el resultado
 ```
 6. Leer un número natural n, leer otro dato de tipo real x y calcular x^n usando ciclos for.
 ```python
