@@ -189,9 +189,9 @@ if __name__ == "__main__":
     aproximacion = exp_aprox(x, n)
 
     # Imprimir el valor real, la aproximación y la diferencia entre ellos
-    print(f"Valor real: {valor_real}")
-    print(f"Aproximación: {aproximacion}")
-    print(f"Diferencia: {abs(valor_real - aproximacion)}")
+    print("Valor real:",valor_real)
+    print("Aproximación:",aproximacion)
+    print("Diferencia:",(abs(valor_real - aproximacion)))
 ```
 9. Diseñar una función que permita calcular una aproximación de la función seno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función seno y mostrar la diferencia entre el valor real y la aproximación.
 $$sin(x) \approx sin(x,n) \approx \sum_{i=0}^{n} (-1)^i \frac{x^{2i+1}}{(2i+1)!}$$
