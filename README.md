@@ -238,9 +238,9 @@ if __name__ == "__main__":
     aproximacion = sin_aprox(x, n)
 
     # Imprimir el valor real, la aproximación y la diferencia entre ellos
-    print(f"Valor real: {valor_real}")
-    print(f"Aproximación: {aproximacion}")
-    print(f"Diferencia: {abs(valor_real - aproximacion)}")
+    print("Valor real:", valor_real)
+    print("Aproximación:", aproximacion)
+    print("Diferencia:", (abs(valor_real - aproximacion)))
 ```
 10. Diseñar una función que permita calcular una aproximación de la función arcotangente alrededor de 0 para cualquier valor x en el rango [-1, 1], utilizando los primeros n términos de la serie de Maclaurin. **nota:** use *math* para traer la función arctan y mostrar la diferencia entre el valor real y la aproximación.
 $$arctan(x) \approx arctan(x,n) \approx \sum_{i=0}^{n} (-1)^i \frac{x^{2i+1}}{(2i+1)}$$
@@ -291,7 +291,8 @@ if __name__ == "__main__":
     aproximacion = arcotangente_aprox(x, n)
 
     # Imprimir el valor real, la aproximación y la diferencia entre ellos
-    print(f"Valor real: {valor_real}")
-    print(f"Aproximación: {aproximacion}")
-    print(f"Diferencia: {abs(valor_real - aproximacion)}")
+    print("Valor real:",valor_real)
+    print("Aproximación:",aproximacion)
+    print("Diferencia:", (abs(valor_real - aproximacion)))
+
 ```
